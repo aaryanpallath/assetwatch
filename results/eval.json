@@ -1,0 +1,178 @@
+{
+  "train": {
+    "snapshots": [
+      "2025-10-08",
+      "2025-10-15",
+      "2025-10-22",
+      "2025-10-29",
+      "2025-11-05",
+      "2025-11-12",
+      "2025-11-19",
+      "2025-11-26"
+    ],
+    "drive_weeks": 2652836,
+    "failures_within_30d": 2309
+  },
+  "test": {
+    "snapshots": [
+      "2026-01-07",
+      "2026-01-14",
+      "2026-01-21",
+      "2026-01-28",
+      "2026-02-04",
+      "2026-02-11",
+      "2026-02-18",
+      "2026-02-25"
+    ],
+    "drive_weeks": 2672278,
+    "failures_within_30d": 2483,
+    "drives_per_snapshot": 334034
+  },
+  "rule_as_alert": {
+    "flagged_pct": 8.24,
+    "recall": 0.694,
+    "precision": 0.008
+  },
+  "model_at_rule_alert_volume": {
+    "budget_pct": 8.24,
+    "replaced": 220196,
+    "failures": 2483,
+    "caught": 1602,
+    "recall": 0.645,
+    "precision": 0.007
+  },
+  "models": {
+    "SMART rule (5, 187, 188, 197, 198 > 0)": {
+      "pr_auc": 0.0106,
+      "budgets": [
+        {
+          "budget_pct": 0.1,
+          "replaced": 2674,
+          "failures": 2483,
+          "caught": 33,
+          "recall": 0.013,
+          "precision": 0.012
+        },
+        {
+          "budget_pct": 0.25,
+          "replaced": 6680,
+          "failures": 2483,
+          "caught": 100,
+          "recall": 0.04,
+          "precision": 0.015
+        },
+        {
+          "budget_pct": 0.5,
+          "replaced": 13361,
+          "failures": 2483,
+          "caught": 214,
+          "recall": 0.086,
+          "precision": 0.016
+        },
+        {
+          "budget_pct": 1.0,
+          "replaced": 26723,
+          "failures": 2483,
+          "caught": 302,
+          "recall": 0.122,
+          "precision": 0.011
+        },
+        {
+          "budget_pct": 2.0,
+          "replaced": 53445,
+          "failures": 2483,
+          "caught": 994,
+          "recall": 0.4,
+          "precision": 0.019
+        },
+        {
+          "budget_pct": 5.0,
+          "replaced": 133613,
+          "failures": 2483,
+          "caught": 1503,
+          "recall": 0.605,
+          "precision": 0.011
+        }
+      ]
+    },
+    "gradient boosting": {
+      "pr_auc": 0.0575,
+      "budgets": [
+        {
+          "budget_pct": 0.1,
+          "replaced": 2674,
+          "failures": 2483,
+          "caught": 333,
+          "recall": 0.134,
+          "precision": 0.125
+        },
+        {
+          "budget_pct": 0.25,
+          "replaced": 6680,
+          "failures": 2483,
+          "caught": 566,
+          "recall": 0.228,
+          "precision": 0.085
+        },
+        {
+          "budget_pct": 0.5,
+          "replaced": 13361,
+          "failures": 2483,
+          "caught": 748,
+          "recall": 0.301,
+          "precision": 0.056
+        },
+        {
+          "budget_pct": 1.0,
+          "replaced": 26723,
+          "failures": 2483,
+          "caught": 951,
+          "recall": 0.383,
+          "precision": 0.036
+        },
+        {
+          "budget_pct": 2.0,
+          "replaced": 53445,
+          "failures": 2483,
+          "caught": 1214,
+          "recall": 0.489,
+          "precision": 0.023
+        },
+        {
+          "budget_pct": 5.0,
+          "replaced": 133613,
+          "failures": 2483,
+          "caught": 1471,
+          "recall": 0.592,
+          "precision": 0.011
+        }
+      ]
+    }
+  },
+  "calibration": {
+    "expected_failures": 1417.4,
+    "observed_failures": 2483,
+    "by_risk_rank": [
+      {
+        "rank": "1-100",
+        "expected": 55.9,
+        "observed": 38
+      },
+      {
+        "rank": "101-1000",
+        "expected": 223.8,
+        "observed": 144
+      },
+      {
+        "rank": "1001-10000",
+        "expected": 408.3,
+        "observed": 499
+      },
+      {
+        "rank": "10001-2672278",
+        "expected": 729.4,
+        "observed": 1802
+      }
+    ]
+  }
+}
